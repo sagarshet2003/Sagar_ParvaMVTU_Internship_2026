@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big_box{
+            width: 1000px;
+            height: 600px;
+            gap: 10px;
+            background-color: burlywood;
+            display: flex;
+            /* justify---start,center,end,space-between,evenly,around */
+            /* justify content:Horizontal plane or x-axis */
+            justify-content: center;
+            /* align items:vertical plane or y-axis */
+            /* align----start,center,end */
+            align-items: end;
+            /* flex-direction: row,row-reverse,column-reverse; */
+            /* flex-direction: column-reverse; */
+            flex-wrap: wrap;
+            /* align-content: start,end,center,space-between,evenly,around; */
+             align-content: center;  /*it works only when flex-wrap-wrap*/
+            
+        }
+        .small-box{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border: 1px solid white;
+            font-size: 30px;
+            color: yellow;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="big_box">
+        <div class="small-box">1 </div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+        <div class="small-box">4</div>
+        <div class="small-box">5</div>
+        <div class="small-box">6</div>
+        <div class="small-box">7</div>
+        <div class="small-box">8</div>
+        <div class="small-box">9</div>
+        <div class="small-box">10</div>
+        <div class="small-box">11</div>
+        <div class="small-box">12</div>
+        <div class="small-box">13</div>
+        <div class="small-box">14</div>
+        <div class="small-box">15</div>
+    </div>
+</body>
+</html>

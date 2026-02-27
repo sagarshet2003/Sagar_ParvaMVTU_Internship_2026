@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What we can do</title>
+</head>
+<body>
+    <h1>What we can do</h1>
+    <h3>1. we can change HTML content</h3>
+    <p id="demo">This is HTML content</p>
+    <button onclick="document.getElementById('demo').innerText='JS will change html content'">Change content</button>
+
+    <h3>2.we can change HTML attribute</h3>
+    <img src="./off.jpeg" alt="OFF" id="img_id">
+    <button onclick="document.getElementById('img_id').setAttribute('src','./on.jpeg')">Turn ON</button>
+    <button onclick="document.getElementById('img_id').setAttribute('src','./off.jpeg')">Turn OFF</button>
+
+    <h3>3.We can change css </h3>
+    <p id="demo1">We can change css </p>
+    <button onclick="document.getElementById('demo1').style.color='green'">Change CSS</button>
+
+    <h3>4.We can hide HTML </h3>
+    <p id="demo2">We can hide html </p>
+    <button onclick="document.getElementById('demo2').style.display='none'">Hide HTML</button>
+
+    <h3>5.We can show HTML </h3>
+    <p id="demo3" style="display:none">We can show html</p>
+    <button onclick="document.getElementById('demo3').style.display='block'">Show HTML</button>
+</body>
+</html>

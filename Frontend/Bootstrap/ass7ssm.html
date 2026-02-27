@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>TravelGo - Explore the World</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="TravelGo - Your ultimate guide to world destinations, packages, and bookings." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="ssmstyle180226.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <section id="navbar">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand " href="#">TravelGo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Booking</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- HERO CAROUSEL -->
+  <section id="herosection">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" data-bs-interval="10000">
+          <div class="position-relative">
+            <img src="../media/moscow.webp" class="d-block w-100" alt="Moscow"
+              style="filter: brightness(60%); height: 530px; object-fit: cover;">
+            <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+              <h1>MOSCOW</h1>
+              <p>Russia's capital, famed for the Kremlin, Red Square, and its palatial metro system</p>
+              <button class="btn btn-outline-light btn-sm">MOSCOW</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="position-relative">
+            <img src="../media/dubai.webp" class="d-block w-100" alt="Dubai"
+              style="filter: brightness(60%); height: 530px; object-fit: cover;">
+            <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+              <h1>DUBAI</h1>
+              <p>A futuristic desert metropolis known for luxury, innovation, and the towering Burj Khalifa.</p>
+              <button class="btn btn-outline-light btn-sm">DUBAI</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="position-relative">
+            <img src="../media/tokyo.webp" class="d-block w-100" alt="Tokyo"
+              style="filter: brightness(60%); height: 530px; object-fit: cover;">
+            <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+              <h1>TOKYO</h1>
+              <p>Japan's bustling capital blending ultramodern skyscrapers with historic temples.</p>
+              <button class="btn btn-outline-light btn-sm">TOKYO</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="position-relative">
+            <img src="../media/london.webp" class="d-block w-100" alt="London"
+              style="filter: brightness(60%); height: 530px; object-fit: cover;">
+            <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+              <h1>LONDON</h1>
+              <p>A global hub of history, culture, and finance, home to the iconic Thames and Big Ben</p>
+              <button class="btn btn-outline-light btn-sm">LONDON</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- POPULAR CITIES CARDS -->
+  <section id="card" class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-5">POPULAR CITIES</h1>
+      <div class="row g-4">
+
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
+          <div class="card h-100 ">
+            <img src="../media/homeill.jpg" class="card-img-top " alt="Karatagi">
+            <div class="card-body">
+              <h5 class="card-title">🔥 KARATAGI</h5>
+              <p class="card-text">Very Natural Beauty with Waterfalls and Industries</p>
+              <p>$2200</p>
+              <a href="#" class="btn btn-primary">KARATAGI</a>
+            </div>
+          </div>
+        </div>
+        <!-- 1st card -->
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
+          <div class="card h-100">
+            <img src="../media/london.webp" class="card-img-top" alt="London">
+            <div class="card-body">
+              <h5 class="card-title">👌 LONDON</h5>
+              <p class="card-text">A global hub of history, culture, and finance, home to the iconic Thames and Big Ben
+              </p>
+              <p>$1200</p>
+              <a href="#" class="btn btn-primary">LONDON</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2nd card -->
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
+          <div class="card h-100">
+            <img src="../media/kobe.webp" class="card-img-top" alt="Kobe">
+            <div class="card-body">
+              <h5 class="card-title">❤️KOBE</h5>
+              <p class="card-text">A cosmopolitan port city famed for its scenic setting and world-renowned Kobe beef.
+              </p>
+              <p>$1400</p>
+              <a href="#" class="btn btn-primary">KOBE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3rd card -->
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
+          <div class="card h-100">
+            <img src="../media/dubai.webp" class="card-img-top" alt="Dubai">
+            <div class="card-body">
+              <h5 class="card-title">🏣 DUBAI</h5>
+              <p class="card-text">A futuristic desert metropolis known for luxury, innovation, and the towering Burj
+                Khalifa.</p>
+              <p>$1600</p>
+              <a href="#" class="btn btn-primary">DUBAI</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4th card -->
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
+          <div class="card h-100">
+            <img src="../media/moscow.webp" class="card-img-top" alt="Moscow">
+            <div class="card-body">
+              <h5 class="card-title">🔥 MOSCOW</h5>
+              <p class="card-text">Russia's capital, famed for the Kremlin, Red Square, and its palatial metro system
+              </p>
+              <p>$1800</p>
+              <a href="#" class="btn btn-primary">MOSCOW</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5th card -->
+        <div class="col-sm-12 col-md-6 col-lg-3 col-xl-4">
+          <div class="card h-100">
+            <img src="../media/tokyo.webp" class="card-img-top" alt="Tokyo">
+            <div class="card-body">
+              <h5 class="card-title">👌 TOKYO</h5>
+              <p class="card-text">Japan's bustling capital blending ultramodern skyscrapers with historic temples.</p>
+              <p>$2000</p>
+              <a href="#" class="btn btn-primary">TOKYO</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6th card -->
+
+
+      </div>
+    </div>
+  </section>
+  <section id="Pricing" class="py-5">
+    <div class="container text-center">
+      <h1 class="fw-bold mb-5">PRICING</h1>
+      <div class="row g-4 justify-content-center">
+
+        <!-- BASIC -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header bg-secondary text-white fw-bold fs-4 py-3">
+              BASIC
+            </div>
+            <div class="card-body">
+              <h2 class="display-5 fw-bold text-secondary my-3">$1000</h2>
+              <p class="text-muted">2 CITIES</p>
+              <p>Best Travel Combo</p>
+              <a href="#" class="btn btn-secondary w-100 mt-3">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow border border-primary border-2">
+            <div class="card-header bg-primary text-white fw-bold fs-4 py-3">
+              STANDARD ⭐
+            </div>
+            <div class="card-body">
+              <h2 class="display-5 fw-bold text-primary my-3">$2000</h2>
+              <p class="text-muted">4 CITIES</p>
+              <p>Best for Regular Travellers</p>
+              <a href="#" class="btn btn-primary w-100 mt-3">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header bg-warning text-dark fw-bold fs-4 py-3">
+              PREMIUM 🔥
+            </div>
+            <div class="card-body">
+              <h2 class="display-5 fw-bold text-warning my-3">$3000</h2>
+              <p class="text-muted">6 CITIES</p>
+              <p>Best for Luxury Travellers</p>
+              <a href="#" class="btn btn-warning w-100 mt-3">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- <section id="Pricing" class="py-5"></section> -->
+  <section id="Booking" class="py-5">
+    <div>
+      <h1 style="text-align: center;" class="fw-bold mb-5">BOOKING</h1>
+      <!-- full name -->
+      <div class="form-floating mb-3">
+        <input type="fullname" class="form-control" id="floatingInput" placeholder="Full Name">
+        <label for=" floatingInput">Full Name</label>
+      </div>
+      <!-- email -->
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingemail" placeholder="Email">
+        <label for="floatingemail">Email</label>
+      </div>
+      <!-- phone number -->
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="floatingnumber" placeholder="Phone Number">
+        <label for="floatingnumber">Phone Number</label>
+      </div>
+      <!-- destiantion dropdown -->
+      <div class="form-floating mb-3">
+        <select class="form-select" id="floatingselect" aria-label="Floating label select example">
+          <option selected>Select Destination</option>
+          <option value="7" style="background-color: aquamarine;" class=" text-center">BASIC</option>
+          <option value="8" style="background-color:lightgreen;" class=" text-center">STANDARD</option>
+          <option value="9" style="background-color:yellow;" class=" text-center">PREMIUM</option>
+          <option value="1">Dubai</option>
+          <option value="2">Moscow</option>
+          <option value="3">Tokyo</option>
+          <option value="4">London</option>
+          <option value="5" class=" text-center">Karatagi</option>
+          <option value="6">Kobe</option>
+        </select>
+        <label for="floatingselect">Destination</label>
+      </div>
+      <!-- travel date -->
+      <div class="form-floating mb-3">
+        <input type="date" class="form-control" id="floatingdate" placeholder="Travel Date">
+        <label for="floatingdate">Travel Date</label>
+      </div>
+      <!-- number of people -->
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="floatingpeople" placeholder="Number of People">
+        <label for="floatingpeople">Number of People</label>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-info" type="button">Submit</button>
+      </div>
+
+      <!-- testimonials -->
+      <h1 style="text-align: center;" class="fw-bold mb-3 py-5">TESTIMONIALS</h1>
+      <section class="p-2 text-center bg-light">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="../media/ai-generated-a-picture-of-a-teacher-in-her-classroom-free-photo.jpg"
+                class="rounded-circle mx-auto d-block py-3 " style="width: 180px; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Dimplegiri</h5>
+                <p class="card-text" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Rem facere dolorem
+                  perferendis, distinctio incidunt at ab inventore quam doloremque eaque.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="../media/portrait-smiling-male-teacher-class_1034016-5095.avif"
+                class="rounded-circle mx-auto d-block py-3 " style="width: 180px; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Macron</h5>
+                <p class="card-text" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Rem facere dolorem
+                  perferendis, distinctio incidunt at ab inventore quam doloremque eaque.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="../media/ai-generated-teacher-at-school-free-photo.jpg"
+                class="rounded-circle mx-auto d-block py-3 " style="width: 180px; height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Benath</h5>
+                <p class="card-text " style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Rem facere dolorem
+                  perferendis, distinctio incidunt at ab inventore quam doloremque eaque.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="bg-dark text-white py-4">
+      <p class="text-center">TravelGo is the Best Travel Agency in the World for
+        Travellers all around the Universe</p>
+      <p class="fw-bold text-center">Follow Us On Social Media</p>
+      <div class="d-flex justify-content-center gap-4 fs-4 mb-3">
+        <a href="https://www.instagram.com/" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.twitter.com/" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" class="text-white"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.whatsapp.com/" class="text-white"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <p class="text-center mb-0">Copyright © 2026 TravelGo. All rights reserved.</p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

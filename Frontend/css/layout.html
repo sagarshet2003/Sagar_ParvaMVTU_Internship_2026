@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            height: 500px;
+            grid-template-columns: repeat(3,300px);
+            grid-gap: 10px;
+        }
+
+        .layout{
+            background-color: green;
+            color: white;
+            font-size: 30px;
+            /* To place the text at center of the box */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .layout-1{
+            background-color: green;
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+        }
+        .layout-2{
+            background-color: green;
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+        }
+        .layout-3{
+            background-color: red;
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+        }
+        .layout-4{
+            background-color: yellow;
+             grid-column: 2 / 3;
+            grid-row: 2 / 3;
+
+        }
+        .layout-5{
+            background-color: red;
+             grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+        .layout-6{
+            background-color: green;
+             grid-column: 4 / 5;
+            grid-row: 2 / 4;
+        }
+        .layout-7{
+            background-color: red;
+             grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+        .layout-8{
+            background-color: yellow;
+             grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="layout layout-1">Layout1</div>
+        <div class="layout layout-2">Layout2</div>
+        <div class="layout layout-3">Layout3</div>
+        <div class="layout layout-4">Layout4</div>
+        <div class="layout layout-5">Layout5</div>
+        <div class="layout layout-6">Layout6</div>
+        <div class="layout layout-7">Layout7</div>
+        <div class="layout layout-8">Layout8</div>
+    </div>
+</body>
+</html>

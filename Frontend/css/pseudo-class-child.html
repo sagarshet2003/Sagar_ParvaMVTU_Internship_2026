@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+        font-size: 20px;
+        }
+        li:first-child{
+            color: red;
+        }
+        li:last-child{
+            color: blue;
+        }
+        li:nth-child(2){
+            color: blueviolet;
+        }
+        /* even child */
+        li:nth-child(2n){  /*2n refers to even numbers*/
+            color: brown;
+        }
+        /* Odd child */
+        li:nth-child(2n + 1){
+            color: green;
+        }
+        /* Multiples of 3 */
+        li:nth-child(3n){
+            color: gold;
+        }
+
+        /* Pseudo element */
+        h1::first-letter{
+            color: red;
+            font-size: 40px;
+        }
+
+        div{
+            border: 1px solid black;
+        }
+        h1:first-of-type{
+            background-color: black;
+            color: white;
+        }
+        h1:last-of-type{
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>List items</h1>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li >List item 5</li>
+        <li >List item 6</li>
+        <li >List item 7</li>
+        <li >List item 8</li>
+        <li >List item 9</li>
+        <li >List item 10</li>
+    </ul>
+    <div>
+        <h2>Heading 2</h2>
+        <h1>Heading within the div</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, reiciendis!</p>
+
+        <h2>Heading 2 in between other tags</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim voluptate velit at expedita voluptates culpa nam qui autem aspernatur possimus.</p>
+        <h1>Last heading</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer-box{
+            border: 5px solid black;
+            display: grid;
+            height: 100px;
+            grid-auto-rows: 200px;
+            /* If the items are added more, the it will occupy the rows, if you need to occupy the colums ,we can use grid-auto-flow property*/
+            /* to set automatically or newly added items */
+            /* grid-template-colums: no of columns with the size */
+            /* grid-template-rows: no of columns with the size */
+            /* fr-fraction */ /*fr also indirectly meant for width*/
+            grid-template-columns: 1fr 2fr 3fr;
+            /* grid-template-columns: 200px 200px; */
+            /* grid-template-rows: 200px 200px 200px 200px 200px; */
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .box{
+            background-color: brown;
+            border: 1px solid white;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <!-- div.box.box-{Box $}*10 -->
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+        <div class="box box-5">Box 5</div>
+        <div class="box box-6">Box 6</div>
+        <div class="box box-7">Box 7</div>
+        <div class="box box-8">Box 8</div>
+        <div class="box box-9">Box 9</div>
+        <div class="box box-10">Box 10</div>
+    </div>
+</body>
+</html>

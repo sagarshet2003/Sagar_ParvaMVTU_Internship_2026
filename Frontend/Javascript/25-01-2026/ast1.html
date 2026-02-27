@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form to Table</title>
+
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form{
+            margin-bottom: 20px;
+        }
+
+        input{
+            padding: 8px;
+            margin: 5px;
+        }
+
+        #btn{
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            color: white;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 60%;
+            text-align: center;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th{
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="container">
+
+    <h2>Student Form</h2>
+
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="number" id="age" placeholder="Enter Age" required>
+        <br>
+        <button type="button" id="btn" onclick="addData()">Submit</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+</div>
+
+<script>
+
+    function addData(){
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const age = document.getElementById("age").value;
+
+
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Age:", age);
+
+
+        const tableBody = document.getElementById("tableBody");
+        const newRow = document.createElement("tr");
+
+        newRow.innerHTML = `
+            <td>${name}</td>
+            <td>${email}</td>
+            <td>${age}</td>
+        `;
+
+        tableBody.appendChild(newRow);
+
+        document.getElementById("myForm").reset();
+    }
+
+</script>
+
+</body>
+</html>

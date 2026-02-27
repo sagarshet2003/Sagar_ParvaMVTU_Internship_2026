@@ -1,0 +1,9 @@
+1. 3 values from user input
+write logic in js which is greater among 3 numbers
+2. user input from user whether the number is even or odd
+3. user input value whether number multiples of 5 or not
+
+while & do while
+
+
+Presentation:  HTML Tables

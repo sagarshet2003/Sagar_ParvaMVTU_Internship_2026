@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form Input Table</title>
+<style>
+
+body{
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+}
+
+table{
+margin: auto;
+margin-top: 20px;
+border-collapse: collapse;
+width: 60%;
+}
+
+table, th, td{
+border: 1px solid black;
+padding: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Fill the details in the Form</h2>
+
+<form id="userForm">
+
+        <input type="text" id="name" placeholder="Enter Name" required><br> <br>
+        <input type="email" id="email" placeholder="Enter Email" required><br> <br>
+        <input type="number" id="age" placeholder="Age" required><br> <br>
+
+        <button type="button" onclick="addData()">Enter</button>
+        <button type="reset">Reset</button>
+
+</form>
+
+
+<h2>Data Entries</h2>
+
+<table id="dataTable">
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Age</th>
+</tr>
+
+</table>
+
+
+<script>
+
+function addData()
+{
+
+let name = document.getElementById("name").value;
+
+let email = document.getElementById("email").value;
+
+let age = document.getElementById("age").value;
+
+
+if(name=="" || email=="" || age=="")
+{
+alert("Fill all the required fields");
+return;
+}
+
+
+let table = document.getElementById("dataTable");
+
+
+let row = table.insertRow();
+
+
+let cell1 = row.insertCell(0);
+let cell2 = row.insertCell(1);
+let cell3 = row.insertCell(2);
+
+
+cell1.innerHTML = name;
+cell2.innerHTML = email;
+cell3.innerHTML = age;
+
+
+document.getElementById("name").value="";
+document.getElementById("email").value="";
+document.getElementById("age").value="";
+
+}
+
+</script>
+
+</body>
+</html>

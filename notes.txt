@@ -1,0 +1,9 @@
+shortcuts
+ctrl + ? --comment
+alt+z ---wrapping
+shift+alt+arrow mark --clone
+ctrl+d --changing multiple
+pretag
+lorem -- dummy text
+li*5 ---5 list auto
+li{item-$}*5

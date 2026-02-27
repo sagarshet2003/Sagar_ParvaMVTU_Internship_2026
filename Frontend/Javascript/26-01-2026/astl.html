@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Result Management System</title>
+</head>
+<body>
+
+    <h1>Student Result Management System</h1>
+    <p>Open browser console (F12) to see the output.</p>
+
+    <script>
+        // ===============================
+        // Student Result Management System
+        // ===============================
+
+        // Initial Data
+        const students = [
+            { id: 1, name: "Rahul", marks: [80, 75, 90] },
+            { id: 2, name: "Sneha", marks: [60, 70, 65] },
+            { id: 3, name: "Arjun", marks: [95, 92, 88] }
+        ];
+
+
+        // =====================================
+        // Task 1: Function to calculate total using reduce()
+        // =====================================
+        function calculateTotal(marks) {
+            return marks.reduce((total, mark) => total + mark, 0);
+        }
+
+
+        // =====================================
+        // Task 2: Arrow function to calculate average and grade
+        // =====================================
+        const calculateAverageAndGrade = (total, count) => {
+            const average = total / count;
+            let grade;
+
+            if (average >= 90) grade = "A";
+            else if (average >= 75) grade = "B";
+            else if (average >= 60) grade = "C";
+            else grade = "Fail";
+
+            return { average, grade };
+        };
+
+
+        // =====================================
+        // Task 3: Use map() to create new result array
+        // =====================================
+        const studentResults = students.map(student => {
+            const total = calculateTotal(student.marks);
+            const result = calculateAverageAndGrade(total, student.marks.length);
+
+            return {
+                name: student.name,
+                total: total,
+                average: result.average,
+                grade: result.grade
+            };
+        });
+
+        console.log("---- Student Results (Using map) ----");
+        console.log(studentResults);
+
+
+        // =====================================
+        // Task 4: Use filter() to get students with average above 75
+        // =====================================
+        const highScorers = studentResults.filter(student => student.average > 75);
+
+        console.log("\n---- Students with Average Above 75 ----");
+        console.log(highScorers);
+
+
+        // =====================================
+        // Task 5: Use forEach() to print formatted details
+        // =====================================
+        console.log("\n---- All Student Details ----");
+
+        studentResults.forEach(student => {
+            console.log(
+                `Name: ${student.name} | Total: ${student.total} | Average: ${student.average.toFixed(2)} | Grade: ${student.grade}`
+            );
+        });
+
+
+        // =====================================
+        // Task 6: Scope Example (let, var, const)
+        // =====================================
+        function scopeTest() {
+            var a = 10;      // Function scoped
+            let b = 20;      // Block scoped
+            const c = 30;    // Block scoped (cannot be reassigned)
+
+            if (true) {
+                var a = 100;   // Same variable (function scope) – overwritten
+                let b = 200;   // Different variable (block scope)
+                const c = 300; // Different variable (block scope)
+
+                console.log("\nInside block:");
+                console.log("a:", a); // 100
+                console.log("b:", b); // 200
+                console.log("c:", c); // 300
+            }
+
+            console.log("\nOutside block:");
+            console.log("a:", a); // 100 (changed because var is function scoped)
+            console.log("b:", b); // 20 (unchanged because let is block scoped)
+            console.log("c:", c); // 30 (unchanged because const is block scoped)
+        }
+
+        scopeTest();
+
+        /*
+        Explanation:
+        - var is function-scoped, so modifying it inside block affects outside.
+        - let and const are block-scoped, so changes inside block do not affect outside.
+        */
+
+
+        // =====================================
+        // Task 7: Primitive vs Reference Types
+        // =====================================
+
+        // Primitive Type Example
+        let num1 = 10;
+        let num2 = num1;  // Copy value
+
+        num2 = 50;
+
+        console.log("\nPrimitive Type Example:");
+        console.log("num1:", num1); // 10 (unchanged)
+        console.log("num2:", num2); // 50
+
+        /*
+        Primitive types are copied by VALUE.
+        Changing num2 does not affect num1.
+        */
+
+
+        // Reference Type Example
+        let arr1 = [1, 2, 3];
+        let arr2 = arr1;  // Copy reference
+
+        arr2.push(4);
+
+        console.log("\nReference Type Example:");
+        console.log("arr1:", arr1); // [1,2,3,4]
+        console.log("arr2:", arr2); // [1,2,3,4]
+
+        /*
+        Reference types are copied by REFERENCE.
+        Both arr1 and arr2 point to the same memory location.
+        Modifying arr2 also affects arr1.
+        */
+
+    </script>
+
+</body>
+</html>

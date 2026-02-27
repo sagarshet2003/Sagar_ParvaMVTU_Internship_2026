@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            border-left: 3px solid black;
+            border-right: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+
+        .ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            transform: translate(100px,100px);
+            /* animation-name: bounce;
+            animation-duration: 0.5s ;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out; */
+            animation:bounce 2s ease-out infinite;
+        }
+
+        .second-ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blue;
+            transform: translate(100px,100px);
+            animation-name: circle;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+
+        .third-ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(0, 255, 0);
+            transform: translate(100px,100px);
+            animation-name: diagonalBounce;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+
+        /* Bounce animation: rule for animation */
+        @keyframes bounce{
+            0%{
+                transform: translate(100px,100px);
+            }
+            20%{
+                transform: translate(100px,200px);
+            }
+            50%{
+                transform: translate(100px,120px);
+            }
+            75%{
+                transform: translate(100px,200px);
+            }
+            100%{
+                transform: translate(100px,150px);
+            }
+        }
+
+        @keyframes circle{
+            0%{
+                transform: translate(0px,0px);
+            }
+            20%{
+                transform: translate(200px,0px);
+            }
+            40%{
+                transform: translate(200px,200px);
+            }
+            60%{
+                transform: translate(0px,200px);
+            }
+            80%{
+                transform: translate(0px,0px);
+            }
+            100%{
+                transform: translate(100px,100px);
+            }
+        }
+
+        @keyframes diagonalBounce{
+            0%{
+                transform: translate(0px,0px);
+                background-color: red;
+            }
+            11%{
+                transform: translate(100px,100px);
+                background-color: green;
+            }
+            22%{
+                transform: translate(200px,0px);
+                background-color: yellow;
+            }
+            44%{
+                transform: translate(200px,200px);
+                background-color:aqua;
+            }
+            66%{
+                transform: translate(0px,200px);
+                background-color: orange;
+            }
+            88%{
+                transform: translate(0px,0px);
+                background-color: orchid;
+            }
+            100%{
+                transform: translate(100px,100px);
+                background-color: black;
+            }
+        }
+
+        .outer-box{
+        width: 800px;
+        height: 300px;
+        border: 5px solid black;
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        }
+
+        .inner-box{
+            width: 100px;
+            height: 100px;
+            animation-name: floatRotate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        .box-1{
+            background-color: lightcoral;
+            animation-delay: 0.2S;
+        }
+
+        .box-2{
+            background-color: lightseagreen;
+            animation-delay: 0.4S;
+        }
+
+        .box-3{
+            background-color: lightgreen;
+            animation-delay: 0.6S;
+        }
+
+        .box-4{
+            background-color: lightsalmon;
+            animation-delay: 0.8S;
+        }
+
+        @keyframes floatRotate{
+            0%{
+                transform: translateY(0) rotate(0deg);
+            }
+            25%{
+                transform: translateY(-20px) rotate(45deg);
+            }
+            50%{
+                transform: translateY(0px) rotate(90deg);
+            }
+            75%{
+                transform: translateY(-20px) rotate(135deg);
+            }
+            100%{
+                transform: translateY(0px) rotate(180deg);
+            }
+        }
+
+        .preloader{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            border-top: 5px solid blue;
+            border-bottom: 5px solid red;
+            border-radius: 50%;
+            animation-name: loading;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        }
+
+        .line{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border-top: 2px solid brown;
+            border-bottom:2px solid yellowgreen ;
+            animation-name: loading;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes loading{
+            0%{
+                transform: rotate(0deg);
+            }
+            12%{
+                transform: rotate(0deg);
+            }
+            0%{
+                transform: rotate(0deg);
+            }
+            0%{
+                transform: rotate(0deg);
+            }
+            0%{
+                transform: rotate(0deg);
+            }
+            0%{
+                transform: rotate(0deg);
+            }
+            0%{
+                transform: rotate(0deg);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="ball"></div>
+    </div>
+
+    <div class="box">
+        <div class="second-ball"></div>
+    </div>
+    <div class="box">
+        <div class="third-ball"></div>
+    </div>
+
+    <div class="outer-box">
+        <div class="inner-box box-1"></div>
+        <div class="inner-box box-2"></div>
+        <div class="inner-box box-3"></div>
+        <div class="inner-box box-4"></div>
+    </div>
+
+    <div class="preloader">
+        <div class="line"></div>
+    </div>
+</body>
+</html>

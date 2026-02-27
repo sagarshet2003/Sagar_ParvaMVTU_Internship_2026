@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment</title>
+</head>
+
+<body>
+
+    <h1>Assignment in Javascript</h1>
+    <p>1. Greatest among 3 numbers</p>
+    <p>2. Even or Odd</p>
+    <p>3. Multiple of 5 or not</p>
+    <p>4. while loop</p>
+    <p>5. do while loop</p>
+
+    <script>
+
+                /*To check greatest among 3 numbers*/
+
+        let num1 = Number(prompt("Enter first number:"));
+        let num2 = Number(prompt("Enter second number:"));
+        let num3 = Number(prompt("Enter third number:"));
+
+        if(num1 >= num2 && num1 >= num3){
+            console.log("Greatest number is: " + num1);
+        }
+        else if(num2 >= num1 && num2 >= num3){
+            console.log("Greatest number is: " + num2);
+        }
+        else{
+            console.log("Greatest number is: " + num3);
+        }
+
+
+        /*To check whether the number is odd or even*/
+
+        let number = Number(prompt("Enter a number to check Even or Odd:"));
+
+        if(number % 2 === 0){
+            console.log(number + " is Even");
+        }
+        else{
+            console.log(number + " is Odd");
+        }
+
+
+        /* To check multiples of 5 */
+
+        let value = Number(prompt("Enter a number to check Multiple of 5:"));
+
+        if(value % 5 === 0){
+            console.log(value + " is a Multiple of 5");
+        }
+        else{
+            console.log(value + " is not a Multiple of 5");
+        }
+
+
+        // while loop
+        let w = 1;
+
+        while(w <= 10) {
+            console.log("While Loop Value:", w);
+            w++;
+        }
+
+
+        // do-while loop
+        let d = 1;
+
+        do {
+            console.log("Do While Loop Value:", d);
+            d++;
+        } while(d <= 10);
+
+    </script>
+
+</body>
+</html>

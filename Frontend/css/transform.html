@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;
+            height: 200px;
+            background-color: brown;
+
+            /* changing the positon in X axis :translateX(value); */
+            transform: translateX(100px);
+
+            /* changing the positon in Y axis :translateY(value); */
+            transform: translateY(200px);
+
+            /* changing the positon in X and Y axis :translate(value); */
+            transform: translate(200px,200px);
+            transform: scaleX(1.5);
+
+            /* scaleX() scaleY() scale() */
+            transform: translate(200px,200px) scaleY(2);
+
+            /* rotateX() rotateY() rotateZ() rotate(X,Y) */
+            transform: rotate(25deg, 35deg);
+
+            /* rotate3d(x,y,z,a) */
+            transform: rotate3d(1,1,1, 30deg);
+
+            /* Stretching in diagonal way : skew() */
+            /* skewX() skewY() skew(X,Y) */
+            transform: skew(80deg,50deg);
+
+            /* transform:perspective(200px) */
+            transform: translate(400px,400px) scale(1.2) rotate(30deg , 30deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div> 
+</body>
+</html>

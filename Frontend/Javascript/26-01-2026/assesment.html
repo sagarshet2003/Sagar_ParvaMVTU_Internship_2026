@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Result Management System</h1>
+    <script>
+
+const students = [
+    { id: 1, name: "Rahul", marks: [80, 75, 90] },
+    { id: 2, name: "Sneha", marks: [60, 70, 65] },
+    { id: 3, name: "Arjun", marks: [95, 92, 88] }
+];
+
+// Task 1: Create a function that takes marks array and returns total marks using reduce().
+function getTotal(marksArray) {
+    return marksArray.reduce(function(total, mark) {
+        return total + mark;
+    }, 0);
+}
+
+
+ //Task 2: Create an arrow function to calculate average and return grade (A >=90, B >=75, C>=60, Fail <60).
+const getAverageAndGrade = (marksArray) => {
+
+    const total = getTotal(marksArray);
+
+    const average = total / marksArray.length;
+
+    let grade;
+
+    if (average >= 90) {
+        grade = "A";
+    }
+    else if (average >= 75) {
+        grade = "B";
+    }
+    else if (average >= 60) {
+        grade = "C";
+    }
+    else {
+        grade = "Fail";
+    }
+
+    return {
+        average: average,
+        grade: grade
+    };
+};
+
+
+ //Task 3: Use map() to create a new array with name, total, average, and grade.
+const result = students.map(function(student) {
+
+    const total = getTotal(student.marks);
+
+    const avgGrade = getAverageAndGrade(student.marks);
+
+    return {
+        name: student.name,
+        total: total,
+        average: avgGrade.average,
+        grade: avgGrade.grade
+    };
+
+});
+
+console.log("Student Result:", result);
+
+
+
+//Task 4: Use filter() to get students who scored average above 75.
+const topStudents = result.filter(function(student) {
+
+    return student.average > 75;
+
+});
+
+console.log("Top Students (Average > 75):", topStudents);
+
+
+
+
+ //Task 5: Use forEach() to print all student details in proper format.
+console.log("All Student Details:");
+
+result.forEach(function(student) {
+
+    console.log(
+        "Name: " + student.name +
+        " | Total: " + student.total +
+        " | Average: " + student.average.toFixed(2) +
+        " | Grade: " + student.grade
+    );
+
+});
+
+
+
+
+//Task 6: Inside a function declare let, var, const. Create a block and test scope behavior.
+function scopeExample() {
+
+    var a = 10;  // function scope
+    let b = 20;  // block scope
+    const c = 30;  // block scope
+
+    if (true) {
+
+        var a = 100;   // changes original value
+        let b = 200;   // new variable (block scope)
+        const c = 300; // new variable (block scope)
+
+        console.log("Inside block:");
+        console.log("var a =", a);  // 100
+        console.log("let b =", b);  // 200
+        console.log("const c =", c); // 300
+
+    }
+
+    console.log("\nOutside block:");
+    console.log("var a =", a);  // 100 (changed)
+    console.log("let b =", b);  // 20 (not changed)
+    console.log("const c =", c); // 30 (not changed)
+
+}
+
+scopeExample();
+
+
+
+// Task 7: Create example for Primitive vs Reference types. Copy number and array, modify them, and explain difference in comments.
+
+
+// Primitive example
+
+let x = 10;
+
+let y = x;
+
+y = 50;
+
+console.log("\nPrimitive Example:");
+console.log("x =", x); // 10
+console.log("y =", y); // 50
+
+// Explanation:
+// Primitive copies value only.
+// So change in y does not affect x
+
+
+
+// Reference example
+
+let arr1 = [1, 2, 3];
+
+let arr2 = arr1;
+
+arr2.push(4);
+
+console.log("Reference Example:");
+console.log("arr1 =", arr1); // [1,2,3,4]
+console.log("arr2 =", arr2); // [1,2,3,4]
+
+// Explanation:
+// Reference copies memory address.
+// So change in arr2 affects arr1
+    </script>
+</body>
+</html>

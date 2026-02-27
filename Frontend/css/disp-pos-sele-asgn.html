@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(
+                rgba(255,255,255,0.7),
+                rgba(255,255,255,0.7)
+            ),
+            url("../media/college.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Sticky Header */
+        header{
+            text-align: center;
+            background-color: aquamarine;
+            padding: 10px;
+            position: sticky; /* Makes the header stick to the top */
+            top: 0;
+        }
+
+        section{
+            padding: 20px;
+        }
+
+        /* Profile Card */
+        .profile-box{
+            position: relative; /* Allows absolute positioning of badge */
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            width: 350px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        /* Absolute Badge */
+        .badge{
+            position: absolute; /* Positioned relative to .profile-box */
+            top: 10px;
+            right: 10px;
+            background-color: crimson;
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        /* Image Centering */
+        .profile-img{
+            width: 150px;
+            height: 150px;
+            display: block;/* Makes the image a block element */
+            margin: 10px auto;
+        }
+
+        /* Static Position Example */
+        .details{
+            position: static;/* Default position, flows with the document */
+            text-align: center;
+        }
+
+        /* Skills */
+        .skills{
+            position: relative;/* Relative positioning allows for absolute children if needed */
+        }
+
+        .skills li{
+            list-style: none;
+            display: inline-block;/* Makes list items appear side by side */
+            margin-right: 15px;
+            padding: 5px 10px;
+            background-color: lightgoldenrodyellow;
+            border-radius: 5px;
+        }
+
+        /* Hobbies - inline */
+        /* .hobbies li{
+            display: inline-block;
+            margin-right: 15px;
+            padding: 5px 10px;
+            font-style: oblique;
+            list-style-type: square;
+            list-style-position: inside;
+        } */
+        .hobbies{
+            display: flex;
+            gap: 30px;
+            padding-left: 20px;
+            font-size: larger;
+        }
+
+        .hobbies li{
+            list-style-type: square;
+            font-style: oblique;
+        }
+
+        /* Projects - flex */
+        .projects{
+            display: flex;
+            gap: 15px;
+            text-align: justify;
+        }
+
+        /* Hidden Content */
+        .note{
+            display: none;
+        }
+
+        /* Fixed Contact Box */
+        .span1{
+            background-color: lightgreen;
+            padding: 8px 12px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            border-radius: 5px;
+            z-index: 0;
+        }
+        
+        footer{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center; font-style: italic;" >My Information</h2>
+
+    <header>
+        <h1>SAI SANKET M</h1>
+    </header>
+
+    <section>
+
+        <!-- Profile Card -->
+        <div class="profile-box">
+            <span class="badge">STUDENT</span>
+            <img class="profile-img" src="../media/myphoto.jpg" alt="My Photo">
+        </div>
+
+        <!-- Details -->
+        <div class="details">
+            <p><strong>Name:</strong> SAI SANKET M</p>
+            <p><strong>Roll No:</strong> 1AY22CS159</p>
+            <p><strong>Branch:</strong> CSE</p>
+        </div>
+
+        <!-- Education -->
+        <h4>Education</h4>
+        <ul>
+            <li>ACHARYA COLLEGE — B.E. CSE (2022–2026)</li>
+            <li>V.P.H HANCHINMANI — PUC (2020–2022)</li>
+            <li>R.V.S.R SCHOOL — 8th to 10th (2018–2020)</li>
+        </ul>
+
+        <!-- Hobbies -->
+        <h4>Hobbies</h4>
+        <ul class="hobbies">
+            <li>Travelling</li>
+            <li>Badminton</li>
+            <li>Learning</li>
+        </ul>
+
+        <!-- Skills -->
+        <h4>Skills</h4>
+        <ul class="skills">
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML, CSS, JS</li>
+        </ul>
+
+        <!-- Projects -->
+        <h4>Projects</h4>
+        <div class="projects">
+            <p><strong>1.Library Management  System</strong>--A Library Management System (LMS) is a software application designed to automate and manage the daily operations of a library efficiently. It helps librarians handle tasks such as book acquisition, cataloging, issuing and returning books, and maintaining member records. Instead of manual registers, all data is stored digitally, making information retrieval fast and accurate.
+
+The system maintains details of books, authors, publishers, availability status, and due dates. It also manages user accounts for students or members, tracking borrowed books and calculating fines for late returns automatically. Search features allow users to quickly find books by title, author, or subject.
+
+A Library Management System improves accuracy, reduces paperwork, saves time, and enhances overall productivity. It also provides better security for library records and generates reports for inventory and usage analysis. Overall, LMS makes library operations smooth, organized, and user-friendly.
+            </p>
+
+            <p><strong>2.Online Food Delivery System</strong>--An Online Food Delivery System is a digital platform that allows customers to order food from restaurants using websites or mobile applications. It connects customers, restaurants, and delivery partners in a single system. Users can browse menus, select food items, customize orders, make online payments, and track deliveries in real time.
+
+The system manages restaurant listings, food availability, pricing, and order processing automatically. Restaurants receive orders instantly, prepare the food, and hand it over to delivery personnel. Customers benefit from convenience, time savings, and multiple payment options such as UPI, cards, and cash on delivery.
+
+An Online Food Delivery System reduces manual work, improves order accuracy, and enhances customer satisfaction. It also helps restaurants expand their reach and increase sales. Overall, it makes food ordering fast, efficient, and accessible anytime, anywhere.
+            </p>
+            <p><strong>3.Personal Portfolio Website</strong>--A Personal Portfolio Website is an online platform used to showcase an individual’s skills, achievements, and professional work. It acts as a digital resume and helps create a strong personal brand. The website usually includes sections such as an introduction, education, skills, projects, certifications, and contact information.
+
+A portfolio website allows employers and clients to easily view a person’s work, such as projects, designs, or coding samples, in one place. It also highlights creativity, technical ability, and professionalism. Unlike a traditional resume, it can include images, videos, and live project links.
+
+Personal portfolio websites are especially useful for students, developers, designers, and freelancers. They improve online visibility and increase job or project opportunities. Overall, a personal portfolio website helps present one’s identity and talents effectively in the digital world.</p>
+        </div>
+
+    </section>
+
+    <!-- Hidden Text -->
+    <p class="note">This text is hidden using display none.</p>
+
+    <!-- Fixed Contact -->
+    <span class="span1">Contact: 9483347855</span>
+    <!-- <img src="../media/college.jpg" alt="College Image" > -->
+
+    <!-- Display None -->
+    <h3>Parvam <span style="display:none;">skybags</span> company</h3>
+
+    <footer>
+        <p >&copy; 2026 SAI SANKET M. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

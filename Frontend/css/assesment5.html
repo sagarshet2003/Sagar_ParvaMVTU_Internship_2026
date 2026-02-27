@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         span,a{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        div,p{
+            display: inline;
+            background-color: aqua;
+            width: 100px;
+            height: 300px;
+        }
+        .div1{
+            display: inline-block;
+            width: 300px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        #div2{
+            display: none;
+            background-color: cadetblue;
+            height: 100px;
+        }
+         .main_div{
+            display: flex;
+            justify-content: space-evenly;
+            height: 400px;
+        }
+         #static{
+            position: static;
+            background-color: aqua;
+            top: 100px;
+            left: 300px;
+        }
+        #relative{
+            position: relative;
+            left: 30px;
+            top: 30px;
+            width: 300px;
+            height: 100px;
+            background-color: yellowgreen;
+            border: 2px solid black;
+        }
+
+        .container{
+            position:relative;
+            top: 50px;
+            background-color: lightcyan;
+            left: 50px;
+            width: 400px;
+            height: 200px;
+        }
+        #child1{
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            height: 100px;
+            background-color: orange;
+        }
+         #div3{
+            position: sticky;
+            top: 0;
+            left: 5px;
+            background-color: rgb(233, 65, 65);
+            height: 30px;
+            top: 10px;
+            z-index: 2;
+            text-justify: center;
+        }
+        #div4{
+            background-color: rgb(195, 238, 238);
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            top: 50px;
+            right: 0px;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Element Types</h1>
+    <p>1.block elements </p><br>
+    ex: h1-h6, p , div <br>
+    <p>2. inline elements</p><br>
+    ex: span, a , em <br>
+    
+    <h3>Syntax for selector</h3>
+    <pre>
+        selector{
+            display:value;
+        }
+    </pre>
+
+     <h3>1.display:block</h3>
+            <span>Hi</span>
+            <span>This is Sagar</span>
+            <a href="https://google.com">Google</a>
+
+            <h3>2.display:inline</h3>
+            <div>Hi</div>
+            <div>this is Sagar</div>
+            <p>I am from </p>
+            <p>Bengaluru</p>
+
+            <h3>3.display:inline-block</h3>
+            <div class="div1">Hello,welcome</div>
+            <div class="div1">World</div>
+
+            <h3>4.display:none</h3>
+            <div id="div2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad itaque iusto totam doloremque autem laboriosam odit aperiam perspiciatis amet minima.</div>
+
+            <h3>5.display:flex</h3>
+            <div class="main_div">
+        <div class="div">div1</div>
+        <div class="div">div2</div>
+        <div class="div">div3</div>
+    </div>
+
+            <h1>Position property:</h1>
+    <pre>
+        1.position:static
+        2.position:relative
+        3.position:absolute 
+        4.position:fixed 
+        5.position:sticky
+    </pre>
+
+    <h3>Position:static</h3>
+    <div id="static">
+       This is static one.
+    </div>
+
+    <h3>Position:relative</h3>
+    <div id="relative">
+        It is relative position.
+    </div>
+
+    <div class="container">
+        <div id="child1">
+            It is child class.Absolute one.
+        </div>
+    </div>
+
+
+     <div id="div4">
+        Lorem, ipsum dolor.
+    </div>
+    <div id="div3">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, atque , quibusdam possimus Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, vero..
+    </div>
+    <div id="div5">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste libero consequuntur laudantium, repellat pariatur aliquid quasi quo nulla! Sapiente, aliquid est. Magnam sit ut aliquid, natus veniam reprehenderit atque asperiores nesciunt dolore odio odit laudantium quaerat ullam modi minus officiis eligendi harum ratione voluptas amet quis at? Porro illo tenetur nulla laborum, nobis sunt fugit sed facere iste ad voluptate qui deleniti, alias aut harum enim obcaecati! Voluptate qui nihil repellat ex, animi porro perspiciatis, labore debitis quam rem, commodi ab at ducimus quasi. Sit ipsam accusamus perferendis commodi earum quas repudiandae excepturi facere ab assumenda aperiam velit, voluptas molestias dolorum quod vitae incidunt aliquam unde doloribus fuga est optio voluptates! Quasi, quae error! Dicta, explicabo animi? Soluta corrupti repudiandae perspiciatis veniam aliquid harum placeat, hic eos explicabo, aspernatur quam! Vitae quas asperiores sint error soluta accusamus, recusandae tenetur cumque rem quam, nulla a ex at libero dolores voluptates animi quo sequi aut deserunt fugit officiis est itaque. Ipsum quam dolorum nulla ducimus, ea soluta dicta maxime deserunt, fugiat voluptates animi distinctio corporis provident aspernatur voluptate nihil unde delectus quae autem consequatur nobis. Cupiditate nihil dolorem voluptates eveniet non, repellat neque, laboriosam in ipsum incidunt inventore . 
+    </div><br>
+    <div id="div6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum earum doloremque aliquam commodi atque, sit omnis quidem aliquid iste rem ipsa vero esse quos. Facilis eum unde, eius porro, placeat nisi doloribus alias quo id at blanditiis, laboriosam consequuntur error odio? Optio beatae labore voluptatum nulla veritatis officiis dignissimos ut voluptas tempore porro, architecto itaque ea nihil fuga fugiat placeat tempora voluptates unde voluptatem quas. Culpa nostrum quia quis sit maiores rerum et, nam ut adipisci ipsa accusantium neque, quo molestiae eligendi ipsam delectus assumenda! Architecto tempora, dicta maiores ipsam illum rerum? Harum provident incidunt optio voluptas, tempora impedit omnis!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In laborum nulla eius maxime deleniti sequi doloremque, sapiente tenetur, velit dolores nemo tempore ratione mollitia! Asperiores, voluptatem. Dolorem, magni. Quo quaerat dolor animi quidem deleniti dolorem tempora odit commodi illum voluptates ullam placeat, sit, iure id! Ratione blanditiis corrupti qui, laborum officia dolorem iste dolorum quisquam. Maiores iusto, placeat, fuga porro labore sequi autem distinctio ratione consequuntur veniam laboriosam ea libero reiciendis, tempore sint iure! Quos ad itaque vitae vel facere adipisci asperiores corrupti id reiciendis iure, dolorem illo amet! Quasi minima modi quos doloribus sit commodi ut, a saepe consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus accusamus commodi eveniet dolores aliquid, quaerat nihil adipisci et. Dolor saepe maiores officiis, nam temporibus praesentium quas libero magnam recusandae aliquid numquam sed quae reprehenderit eius nulla, neque molestiae nemo doloremque voluptates aperiam perferendis veritatis, laboriosam enim! Aliquid earum explicabo velit? Iste optio laborum alias maiores commodi, aspernatur perferendis at provident beatae? Accusantium enim delectus facilis cupiditate eveniet, explicabo reiciendis culpa, et dolore aspernatur quos quod id. Velit optio modi sequi aperiam expedita maiores quia aspernatur cumque ex itaque. Voluptate quam repudiandae, deleniti provident delectus neque amet magni blanditiis dolores sapiente numquam eius vero id earum rem alias exercitationem cum ea quasi aperiam ipsam nesciunt repellat. Adipisci deleniti tempore ipsa! Magni aperiam doloremque tempora fugit commodi, natus alias perferendis dolor cum. Quisquam illum commodi maxime quaerat similique minima optio voluptatibus iusto, dolor vitae quos deleniti reiciendis aliquid inventore adipisci perspiciatis quibusdam alias fugit iure accusamus officia! Laborum animi labore officia, quaerat magni, possimus quos iusto ut perferendis veritatis earum quod ullam qui. Rem ut quis quae nemo labore quo harum saepe corrupti distinctio. Corrupti quasi deserunt obcaecati earum, alias repellat temporibus reiciendis adipisci quis? Unde nam minima error omnis et?
+    </div>
+
+</body>
+</html>
