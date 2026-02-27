@@ -1,0 +1,6 @@
+1. explore on object destructuring
+2. cloning an array (how to clone an array)
+  a. spread operator
+  b. slice
+  c. concat
+3. spread(thread) operation on student mangaement  like edit 

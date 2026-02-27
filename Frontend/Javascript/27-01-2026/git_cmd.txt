@@ -9,3 +9,11 @@ Github commands:
 6. git pull origin main --> to pull the code from remote to local.
 7. git config --global user.name "user name" -- to configure the credentials in global
 8. git config --global user.email "email" --> to configure the credentials in global
+
+
+
+To add something use follwing instructions
+1.git status
+2. git add .
+3. git commit -m "updated index.html"
+4. git push origin main
