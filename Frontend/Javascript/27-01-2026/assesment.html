@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Student management</h1>
+    <script>
+
+// Object Destructuring
+
+console.log("  Object Destructuring ");
+
+const student = {
+  id: 1,
+  name: "Rahul",
+  age: 20,
+  course: "BCA",
+  marks: [80, 75, 90]
+};
+
+// Basic destructuring
+const { name, age } = student;
+console.log("Name:", name);
+console.log("Age:", age);
+
+// Destructuring with renaming
+const { course: studentCourse } = student;
+console.log("Course:", studentCourse);
+
+// Nested destructuring
+const { marks: [m1, m2, m3] } = student;
+console.log("Marks:", m1, m2, m3);
+
+// Default value
+const { city = "Not Provided" } = student;
+console.log("City:", city);
+
+
+
+// Cloning an Array
+
+console.log("  Cloning an Array");
+
+const originalArray = [10, 20, 30];
+
+// a) Using Spread Operator
+const cloneSpread = [...originalArray];
+cloneSpread.push(40);
+
+console.log("Original (Spread):", originalArray);
+console.log("Cloned (Spread):", cloneSpread);
+
+// b) Using slice()
+const cloneSlice = originalArray.slice();
+cloneSlice.push(50);
+
+console.log("Original (Slice):", originalArray);
+console.log("Cloned (Slice):", cloneSlice);
+
+// c) Using concat()
+const cloneConcat = originalArray.concat();
+cloneConcat.push(60);
+
+console.log("Original (Concat):", originalArray);
+console.log("Cloned (Concat):", cloneConcat);
+
+
+// Spread, slice, and concat create shallow copies.
+// Modifying cloned array does NOT affect original array.
+
+
+
+// Spread Operator in Student Management (Edit Example)
+
+
+console.log("  Spread Operator in Student Management ");
+
+const students = [
+  { id: 1, name: "Rahul", marks: [80, 75, 90] },
+  { id: 2, name: "Sneha", marks: [60, 70, 65] },
+  { id: 3, name: "Arjun", marks: [95, 92, 88] }
+];
+
+console.log("Original Students:");
+console.log(students);
+
+// we want to update neha marks
+
+const updatedStudents = students.map(student => {
+  if (student.id === 2) {
+    return {
+      ...student,                   // spread existing properties
+      marks: [...student.marks, 85] // add new mark using spread
+    };
+  }
+  return student;
+});
+
+console.log("After Editing Neha's Marks:");
+console.log(updatedStudents);
+
+console.log("Original Students Remain Unchanged:");
+console.log(students);
+
+    </script>
+</body>
+</html>
