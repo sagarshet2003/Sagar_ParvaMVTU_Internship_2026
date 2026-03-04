@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>innerText and TextContent and innerHTML</h3>
+
+    <p id="p_tag1">Lorem ipsum dolor sit amet.</p>
+    <p id="p_tag2">Lorem ipsum dolor sit amet. <span style ="display:none">lorem2</span> Lorem ipsum dolor sit amet.</p>
+
+    <script>
+        const first = document.getElementById("p_tag1");
+        const second = document.getElementById("p_tag2");
+
+        //innerText
+        console.log("first inner text:", first.innerText);
+        console.log("second inner text:", second.innerText);
+
+        //textContent
+        console.log("first text content:", first.textContent);
+        console.log("second text content:",second.textContent);
+        
+        //innerHTML
+         console.log("first inner HTML:", first.innerHTML);
+        console.log("second inner HTML:", second.innerHTML);
+
+    </script>
+</body>
+</html>

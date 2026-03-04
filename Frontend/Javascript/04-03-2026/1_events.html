@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Form events - input, blur, change, submit -->
+    <form id="contact-form" novalidate >
+        <label for="name" >Name: </label>
+        <input type="text" name="name" id="name" placeholder="Enter name">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="Enter email">
+        <br>
+        <label >Gender: </label> <br>
+        <label for="male">Male:</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Female:</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <br>
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="bengaluru">Bengaluru</option>
+            <option value="mumbai">Mumbai</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+
+        //blur event
+        const email = document.querySelector("#email");
+        email.addEventListener("blur", (event) => {
+            console.log("blur event trigger value is: ", event.target.value);
+        });
+
+        //change event
+        const city = document.getElementById("city");
+        city.addEventListener("change", (e) => {
+            console.log("city value changes: ",e.target.value);
+        });
+
+        //focus
+        const name = document.querySelector('#name');
+        name.addEventListener("focus", () => {
+            console.log("Name input field is focused");
+        });
+
+        const contactForm = document.querySelector('#contact-form');
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault(); //does not refresh page
+            console.log("Form submitted");
+        });
+
+        //window+v -- clipboard 
+    </script>
+</body>
+</html>

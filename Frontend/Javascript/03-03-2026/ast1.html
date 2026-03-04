@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Events Demo</title>
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#box{
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin: auto;
+    line-height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h2>JavaScript Events Practice</h2>
+
+<!-- Mouse Events -->
+<div id="box">Mouse Area</div>
+
+<br><br>
+
+<!-- Keyboard Events -->
+<input type="text" id="keyboardInput" placeholder="Type something...">
+
+<br><br>
+
+<!-- Form Events -->
+<form id="myForm">
+
+Name:
+<input type="text" id="name">
+
+<br><br>
+
+Course:
+<select id="course">
+    <option value="">Select Course</option>
+    <option value="BCA">BCA</option>
+    <option value="BBA">BBA</option>
+</select>
+
+<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<script>
+
+// ==========================================
+// 1️⃣ Mouse Events
+// ==========================================
+
+const box = document.getElementById("box");
+
+box.addEventListener("click", function() {
+    console.log("Mouse Clicked");
+});
+
+box.addEventListener("dblclick", function() {
+    console.log("Mouse Double Clicked");
+});
+
+box.addEventListener("mouseover", function() {
+    console.log("Mouse Over");
+    box.style.backgroundColor = "lightgreen";
+});
+
+box.addEventListener("mouseout", function() {
+    console.log("Mouse Out");
+    box.style.backgroundColor = "lightblue";
+});
+
+
+// ==========================================
+// 2️⃣ Keyboard Events
+// ==========================================
+
+const keyboardInput = document.getElementById("keyboardInput");
+
+keyboardInput.addEventListener("keydown", function(event) {
+    console.log("Key Down:", event.key);
+});
+
+keyboardInput.addEventListener("keyup", function(event) {
+    console.log("Key Up:", event.key);
+});
+
+
+// ==========================================
+// 3️⃣ Form Events
+// ==========================================
+
+const nameInput = document.getElementById("name");
+const courseSelect = document.getElementById("course");
+const form = document.getElementById("myForm");
+
+// input event (runs every time user types)
+nameInput.addEventListener("input", function() {
+    console.log("Typing:", nameInput.value);
+});
+
+// blur event (runs when input loses focus)
+nameInput.addEventListener("blur", function() {
+    console.log("Input Lost Focus");
+});
+
+// change event (runs when selection changes)
+courseSelect.addEventListener("change", function() {
+    console.log("Course Changed to:", courseSelect.value);
+});
+
+// submit event
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // prevents page refresh
+    console.log("Form Submitted");
+    console.log("Name:", nameInput.value);
+    console.log("Course:", courseSelect.value);
+});
+
+</script>
+
+</body>
+</html>

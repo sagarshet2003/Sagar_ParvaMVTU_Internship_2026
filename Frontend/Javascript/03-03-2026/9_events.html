@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events in JS</h1>
+    <p>1. Mouse events - click, dblclick,mouseover,mouseout</p>
+    <p>2. Keyboard events - keydown , keyup</p>
+    <p>3. Form events - input, blur, change, submit</p>
+    <p>4. window -scroll  , resize, load</p>
+    <p>5. clipboard - copy, paste, cut</p>
+    <button id="click1" onclick="handleClick()">click1</button>
+    <button id="click2">click2</button>
+
+    <script>
+        const handleClick = () => {
+            alert("button clicked");
+        }
+
+        //imp
+        const click2 = document.getElementById("click2");
+        click2.addEventListener("dblclick", () => {
+            //handleClick();
+            console.log("clicked");
+        });
+
+    </script>
+</body>
+</html>

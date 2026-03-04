@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events in JavaScript</title>
+
+<style>
+    *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        font-family: Arial;
+        padding:20px;
+    }
+
+    #container {
+        width: 100px;
+        height: 50px;
+        border: 2px solid black;
+        background-color: yellow;
+        position: absolute;
+        top: 200px;
+        left: 0px;
+    }
+
+    #hoverBox{
+        width:150px;
+        height:80px;
+        background-color: lightblue;
+        text-align:center;
+        line-height:80px;
+        margin-top:20px;
+        cursor:pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Events in JS</h1>
+
+<p>1. Mouse events - click, dblclick, mouseover, mouseout</p>
+<p>2. Keyboard events - keydown, keyup</p>
+<p>3. Form events - input, blur, change, submit</p>
+<hr><br>
+
+<h2>Mouse Events</h2>
+
+<button id="click1" onclick="handleClick()">Click</button>
+<button id="click2">Double Click</button>
+
+<div id="hoverBox">Hover Me</div>
+
+<br><br>
+
+
+<h2>Keyboard Events</h2>
+<p>Use Arrow Keys to move the yellow box</p>
+
+<div id="container"></div>
+
+<br><br><br><br>
+
+
+
+<h2>Form Events</h2>
+
+<form id="contact-form">
+
+<label>Name:</label>
+<input type="text" name="name" id="name">
+<br><br>
+
+<label>Email:</label>
+<input type="email" id="email" name="email">
+<br><br>
+
+<label>Gender:</label>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<br><br>
+
+<label>City:</label>
+<select id="city">
+    <option value="">Select City</option>
+    <option value="Bengaluru">Bengaluru</option>
+    <option value="Mumbai">Mumbai</option>
+</select>
+
+<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+
+<script>
+
+
+//  MOUSE EVENTS
+
+const handleClick = () => {
+    alert("Button Clicked (onclick)");
+};
+
+// dblclick using addEventListener
+const click2 = document.getElementById("click2");
+click2.addEventListener("dblclick", () => {
+    console.log("Button Double Clicked");
+});
+
+// mouseover & mouseout
+const hoverBox = document.getElementById("hoverBox");
+
+hoverBox.addEventListener("mouseover", () => {
+    console.log("Mouse Over");
+    hoverBox.style.backgroundColor = "lightgreen";
+});
+
+hoverBox.addEventListener("mouseout", () => {
+    console.log("Mouse Out");
+    hoverBox.style.backgroundColor = "lightblue";
+});
+
+
+
+// KEYBOARD EVENTS
+
+
+const container = document.getElementById("container");
+let x = 0;
+let y = 200;
+
+document.addEventListener("keydown", function(e){
+
+    console.log("Key Down:", e.key);
+
+    if(e.key === "ArrowUp"){
+        y -= 10;
+    }
+    else if(e.key === "ArrowDown"){
+        y += 10;
+    }
+    else if(e.key === "ArrowLeft"){
+        x -= 10;
+    }
+    else if(e.key === "ArrowRight"){
+        x += 10;
+    }
+
+    container.style.top = y + "px";
+    container.style.left = x + "px";
+});
+
+document.addEventListener("keyup", function(e){
+    console.log("Key Up:", e.key);
+});
+
+
+
+// FORM EVENTS
+
+
+const nameInput = document.getElementById("name");
+const citySelect = document.getElementById("city");
+const form = document.getElementById("contact-form");
+
+// input event
+nameInput.addEventListener("input", (event) => {
+    console.log("Typing:", event.target.value);
+});
+
+// blur event
+nameInput.addEventListener("blur", () => {
+    console.log("Name Input Lost Focus");
+});
+
+// change event
+citySelect.addEventListener("change", (event) => {
+    console.log("City Changed:", event.target.value);
+});
+
+// submit event
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    console.log("Form Submitted");
+});
+
+</script>
+
+</body>
+</html>

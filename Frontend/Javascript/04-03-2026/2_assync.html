@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous in JS</h1>
+    <p>By default js is synchronous(main thread) - it will executes the program line by line </p>
+
+    <p>Asynchronous is used in api calls, db queries, file handling etc..</p>
+    <p>1. setTimeout</p>
+    <p>2. setInterval</p>
+    <p>3. promise</p>
+    <p>4. async and await</p>
+    <p>4. fetch api</p>
+
+
+    <script>
+        //synchronous
+        console.log("first");
+        console.log("second");
+        console.log("third");
+        console.log("fourth");
+        console.log("fifth");
+
+        //asynchronous
+        console.log("1");
+        console.log("2");
+
+        //this won't execute by js(browser will execute)
+        setTimeout(() => {
+            console.log("async");
+        }, 3000);
+    </script>
+
+</body>
+
+</html>
