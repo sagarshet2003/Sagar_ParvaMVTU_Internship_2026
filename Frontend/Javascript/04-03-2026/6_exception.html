@@ -9,6 +9,7 @@
     <h1>Exception Handling</h1>
     <p>These mechanisms help prevent program crashes </p>
     <p>try, catch, finally</p>
+    <p>finally - when ever exception occur or nto this will execute by default (here we can add closing resources - dbconnection, file close)</p>
 
     <script>
         console.log(10/2);
@@ -21,6 +22,8 @@
             console.log(obj.name1.age);
         } catch (error) {
             console.log(error);
+        } finally{
+            console.log("closing resources");
         }
 
         console.log("3");
