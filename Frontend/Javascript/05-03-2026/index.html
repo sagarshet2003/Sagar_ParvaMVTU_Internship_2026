@@ -101,6 +101,7 @@
                 city.innerText = `${response.name},${response.sys.country}`;
                 const icon = response.weather[0].icon;
                 weatherIcon.src = `https://openweathermap.org/img/wn/${icon}@2x.png`
+                
                 description.innerText = response.weather[0].description;
                 humidity.innerText = response.main.humidity + "%";
                 wind.innerText = response.wind.speed + "km/h";
