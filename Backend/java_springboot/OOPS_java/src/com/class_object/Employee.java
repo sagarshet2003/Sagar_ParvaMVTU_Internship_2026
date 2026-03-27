@@ -29,6 +29,10 @@ public class Employee {
 		System.out.println("emp_name;"+ emp1.emp_name);
 		System.out.println("emp_id:"+ emp1.emp_id);
 		System.out.println("emp_mail:"+ emp1.emp_email);
-		System.out.println(res);
+		String res1 = emp.isWorking();
+		System.out.println(res1);
+		
 	}
+	
+	
 }
