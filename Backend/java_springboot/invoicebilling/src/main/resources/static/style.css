@@ -1,0 +1,128 @@
+body{
+    background: linear-gradient(to right,#eef2ff,#f8fafc);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#0f172a;
+    padding:15px;
+}
+
+.navbar-brand{
+    color:white !important;
+    font-size:26px;
+    font-weight:bold;
+}
+
+/* Page Heading */
+
+.page-title{
+    color:#0f172a;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+/* Card */
+
+.custom-card{
+    background:white;
+    border:none;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Table */
+
+.table{
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.table thead{
+    background:#2563eb;
+    color:white;
+}
+
+.table tbody tr:hover{
+    background:#eff6ff;
+    transition:0.3s;
+}
+
+/* Buttons */
+
+.btn-custom{
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-custom:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.btn-success-custom{
+    background:#16a34a;
+    color:white;
+    border:none;
+    border-radius:10px;
+}
+
+.btn-success-custom:hover{
+    background:#15803d;
+}
+
+.btn-danger-custom{
+    background:#dc2626;
+    color:white;
+    border:none;
+    border-radius:10px;
+}
+
+.btn-danger-custom:hover{
+    background:#b91c1c;
+}
+
+/* Form */
+
+.form-control{
+    border-radius:12px;
+    padding:10px;
+}
+
+label{
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+/* Badge */
+
+.badge-paid{
+    background:#16a34a;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+}
+
+.badge-unpaid{
+    background:#dc2626;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+}
+
+/* Footer */
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:gray;
+    font-size:14px;
+}

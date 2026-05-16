@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial,sans-serif;
+            background:#f1f5f9;
+        }
+
+        /* Sidebar */
+
+        .sidebar{
+            width:260px;
+            height:100vh;
+            position:fixed;
+            background:#0f172a;
+            padding-top:20px;
+            left:0;
+            top:0;
+        }
+
+        .sidebar h2{
+            color:white;
+            text-align:center;
+            margin-bottom:40px;
+            font-weight:bold;
+        }
+
+        .sidebar a{
+            display:block;
+            color:#cbd5e1;
+            padding:15px 25px;
+            text-decoration:none;
+            transition:0.3s;
+            font-size:17px;
+        }
+
+        .sidebar a:hover{
+            background:#1e293b;
+            color:white;
+            padding-left:35px;
+        }
+
+        .sidebar i{
+            margin-right:10px;
+        }
+
+        /* Main Content */
+
+        .main-content{
+            margin-left:260px;
+            padding:30px;
+        }
+
+        /* Top Navbar */
+
+        .topbar{
+            background:white;
+            padding:18px 30px;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.08);
+            margin-bottom:30px;
+        }
+
+        /* Cards */
+
+        .dashboard-card{
+            border-radius:20px;
+            padding:30px;
+            color:white;
+            transition:0.3s;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card1{
+            background:linear-gradient(to right,#2563eb,#1d4ed8);
+        }
+
+        .card2{
+            background:linear-gradient(to right,#16a34a,#15803d);
+        }
+
+        .card3{
+            background:linear-gradient(to right,#dc2626,#b91c1c);
+        }
+
+        .card4{
+            background:linear-gradient(to right,#7c3aed,#6d28d9);
+        }
+
+        .dashboard-icon{
+            font-size:45px;
+            margin-bottom:15px;
+        }
+
+        .dashboard-btn{
+            background:white;
+            color:black;
+            border:none;
+            border-radius:10px;
+            padding:8px 18px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .welcome-box{
+            background:white;
+            border-radius:20px;
+            padding:35px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom:30px;
+        }
+
+        .footer{
+            text-align:center;
+            margin-top:40px;
+            color:gray;
+        }
+        
+        .dark-mode{
+background:#0f172a;
+color:white;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <h2>
+
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+
+        Billing System
+
+    </h2>
+
+    <a href="/">
+
+        <i class="fa-solid fa-house"></i>
+
+        Dashboard
+
+    </a>
+
+    <a href="/clients">
+
+        <i class="fa-solid fa-users"></i>
+
+        Clients
+
+    </a>
+
+    <a href="/services">
+
+        <i class="fa-solid fa-briefcase"></i>
+
+        Services
+
+    </a>
+
+    <a href="/invoices">
+
+        <i class="fa-solid fa-file-invoice"></i>
+
+        Invoices
+
+    </a>
+
+    <a href="/invoices/new">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Generate Invoice
+
+    </a>
+
+    <a href="/reports/ageing">
+
+        <i class="fa-solid fa-chart-column"></i>
+
+        Reports
+
+    </a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar d-flex justify-content-between align-items-center">
+
+        <div>
+
+            <h3 class="fw-bold mb-1">
+                Dashboard
+            </h3>
+
+            <p class="text-muted mb-0">
+                Welcome to Invoice Billing System
+            </p>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-user-circle fa-2x text-primary"></i>
+
+        </div>
+
+    </div>
+
+    <!-- WELCOME -->
+
+    <div class="welcome-box text-center">
+
+        <h1 class="fw-bold">
+            Finance & Billing Management System
+        </h1>
+
+        <p class="text-muted mt-3">
+
+            Manage clients, invoices, services,
+            payments and reports efficiently.
+
+        </p>
+
+    </div>
+
+    <!-- DASHBOARD CARDS -->
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+
+            <div class="dashboard-card card1 text-center">
+
+                <i class="fa-solid fa-users dashboard-icon"></i>
+
+                <h3>Clients</h3>
+
+                <p>
+                    Manage client details
+                </p>
+
+                <a href="/clients"
+                   class="dashboard-btn">
+
+                    Open
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="dashboard-card card2 text-center">
+
+                <i class="fa-solid fa-briefcase dashboard-icon"></i>
+
+                <h3>Services</h3>
+
+                <p>
+                    Manage services
+                </p>
+
+                <a href="/services"
+                   class="dashboard-btn">
+
+                    Open
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="dashboard-card card3 text-center">
+
+                <i class="fa-solid fa-file-invoice dashboard-icon"></i>
+
+                <h3>Invoices</h3>
+
+                <p>
+                    Generate invoices
+                </p>
+
+                <a href="/invoices"
+                   class="dashboard-btn">
+
+                    Open
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="dashboard-card card4 text-center">
+
+                <i class="fa-solid fa-chart-line dashboard-icon"></i>
+
+                <h3>Reports</h3>
+
+                <p>
+                    View financial reports
+                </p>
+
+                <a href="/reports/ageing"
+                   class="dashboard-btn">
+
+                    Open
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <div class="mt-5">
+
+<h3 class="mb-4">
+Analytics
+</h3>
+
+<img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Clients','Invoices','Payments'],datasets:[{label:'Count',data:[12,19,7]}]}}"
+class="img-fluid">
+
+</div>
+
+    <div class="footer">
+
+        © 2026 Invoice Billing System | Developed by Sagar
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

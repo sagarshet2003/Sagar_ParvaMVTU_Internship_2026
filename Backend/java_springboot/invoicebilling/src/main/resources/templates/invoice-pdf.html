@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Invoice PDF</title>
+
+    <style>
+
+body{
+    font-family: Arial;
+    padding: 30px;
+}
+
+h1{
+    color: #4f46e5;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td{
+    border: 1px solid #ccc;
+}
+
+th{
+    background-color: #4f46e5;
+    color: white;
+    padding: 10px;
+}
+
+td{
+    padding: 10px;
+}
+
+.total-box{
+    margin-top: 20px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Invoice</h2>
+
+<p>
+    <strong>Invoice Number:</strong>
+    <span th:text="${invoice.invoiceNumber}"></span>
+</p>
+
+<p>
+    <strong>Date:</strong>
+    <span th:text="${invoice.invoiceDate}"></span>
+</p>
+
+<p>
+    <strong>Client:</strong>
+    <span th:text="${invoice.client.companyName}"></span>
+</p>
+
+<table>
+
+    <tr>
+        <th>Subtotal</th>
+        <th>Tax</th>
+        <th>Total</th>
+        <th>Status</th>
+    </tr>
+
+    <tr>
+
+        <td th:text="${invoice.subtotal}"></td>
+
+        <td th:text="${invoice.tax}"></td>
+
+        <td th:text="${invoice.total}"></td>
+
+        <td th:text="${invoice.status}"></td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>
